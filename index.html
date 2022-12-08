@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Functions</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <script src="js/app.js"></script>
+    <div class="container">
+        <h1 class="alert alert-info m-4">Functions</h1>
+        <hr>
+        <h3 class="alert alert-warning">1. </h3>
+        <p>
+            - Function - It is the relation between Input & Output.
+            <br>
+            - Function - Block of code which is created to perform a particular task.
+            <br>
+            - Function is very similar to Mathematical formulas.
+            <br>
+            - Ex. Fruit-Juice-Machine can be a function which is created to perform a particular task which inputs the fruits & gives the juice of that fruit. So the content (any fruit) is the Parameter - local declaration, & machine has been instructed to make the juice of any fruit ( Parameters - local declaration ) it will receive in the input. To make the juice is the operation / function which we have defined. Juice is the Output of this function that we will receive after calling the function with the right Arguements. Arguements is the actual input values we receive when the function is being called. Arguement can be an Apple, Banana, Orange. So the Output / Juice ( If the input is apple then you will get apple juice ) will be the result which will vary on the basis of Input. But the operation / process / function would remain same in any case.
+            <br>
+            - Parameters & Arguments in Function - Local declarations / variables which is used at the time of function declaration which is limited for function block only & used for that function operation or task. However, Arguments are the declarations or variables which is used at the time of function call & it's the actual Input values to be used for the operation / task.
+            <br>
+            Ex. 
+            <br> function addTwoNum (firstNum, secondNum) {  // firstNum & secondNum are the parameters <br>
+                                var resultOfTwo = firstNum + secondNum; <br> // You may store the result in a variable
+                                console.log(resultOfTwo); // This will be the output of this function when it's called<br> 
+                                // return firstNum + secondNum; <br> // or You may ' return '' it, so it can be fetched easily when this function is called <br>
+                                        }
+                                        <br>
+                                // var resultofTwo = addTwoNum(73,89); // function is called & result is stored in the variable resultOfTwo
+            <br>
+            <br>
+            - 
+            <b>Examples -</b>
+            <br>
+            <br>
+            <b>*</b> Addition of Two Numbers using a function
+            <br>
+            --- Output -->
+                <script>  
+                    function addTwoNum(firstNum, lastNum) {
+                        // var firstNum; // this is how js compiles these parameters in the form of declarations behind the scene
+                        // var lastNum; // so parameters firstNum & lastNum are just like a local declarations in this function block
+                        var addResult = firstNum + lastNum; // This is the task / instruction / process to be performed by the Function
+                        document.write(addResult); // this will be the output of the function whenever it will be called
+                        // console.log(addResult);
+                    }
+
+                    addTwoNum(50,37); // Need to call the function with the right arguments to get the result
+                    document.write(" | ");
+                    addTwoNum(35); // here only 1 argument is given. Showing output as NaN (Not a Number), must pass 2nd argument to get the correct result
+                    document.write(" | ");
+                    addTwoNum(300,925,90); // here, given 3 arguments by mistake. However, Function is not considering 3rd argument which is not required too
+
+                </script>
+            <br>
+            <br>
+            <b>*</b> Function without parameters
+            <br>
+            --- Output -->
+                <script>
+
+                    function justPrintMsg() {
+                        document.write('Function works without Parameters, not even needed here..');
+                        // return "Function works without parameters too.";
+                        // return "Function works without parameters too." + name; // 'name' if we had such any parameter
+                    }
+
+                    justPrintMsg();
+                    // var retTot = justPrintMsg();
+                    // document.write(retTot);
+                </script>
+            <br>
+            <br>
+            <b>*</b> Function with 'return' keyword - The return statement stops the execution of a function and returns a value ( It maybe any string, numbers etc). so the value you will receive in the form of output can be stored into another variable / declaration, & that can be used multiple times.
+            <br>
+            Note : The return statement stops the execution, so any code you write after 'return' statement would not be considered.
+            <br>
+            --- Output -->
+                <script>
+
+                    function add2Nums(num1, num2) {
+                        return num1 + num2; 
+                        // totNum = num1 + num2;
+                        // return totNum;
+                    }
+
+                    // document.write(add2Nums(23,67));
+
+                    var totalOf2 = add2Nums(94,28); // totalOf2 will store the value of function which is returned using 'return'
+
+                    document.write(totalOf2);
+                    // alert(totalOf2);
+                    // console.log(totalOf2); // Now we can use the output of function add2Nums multiple times by just storing the result of the function in a declaration.
+                    
+                </script>
+            <br>
+            <br>
+            <b>*</b> Function with 'return' keyword but without paramaters
+            <br>
+            --- Output -->
+                <script>
+
+                    function test2() {
+                        return "I love HTML"; 
+                    }
+
+                    var ttest2 = test2();
+
+                    document.write(ttest2);
+                   
+                </script>
+            <br>
+            <br>
+            <b>*</b> Function with 'return' keyword with parameters
+            <br>
+            --- Output -->
+                <script>
+
+                    function test3(skill) {
+                        return 'I love ' + skill;
+                    }
+
+                    var ttest3 = test3('JS');
+
+                    // document.write(ttest3);
+                    document.write(test3('JS'));
+
+                </script>
+            <br>
+        </p>
+        <br>
+        <h3 class="alert alert-warning">Assignment</h3>
+        <p>
+           --
+            <br>
+            <b>Ex.1 -</b> Area of a triangle 
+            <br>
+            Output - --> 
+            <script>
+                function areaOfTriangle(base, height) {
+                            return base * height * 0.5;
+                }
+                var triangle15x20 = areaOfTriangle(15,20);
+                document.write(triangle15x20 + " sq.ft | ");
+                var triangle30x50 = areaOfTriangle(30,50);
+                document.write(triangle30x50 + " sq.ft");
+            </script>
+            <br>
+            <br>
+            <b>Ex.2 -</b> Area of a Circle 
+            <br>
+            Output - --> 
+            <script>
+                // function areaOfCircle(radius) {
+                //     return 3.14 * radius * radius;
+                // }
+                // var circle25 = areaOfCircle(010);
+                document.write(circle25);
+            </script>
+            <br>
+            <br>
+            <b>Ex.3 -</b> GST 18% 
+            <br>
+            Output - --> 
+            <script>
+                    function gst18(amt) {
+                        return amt * 18 / 100;
+                    }
+                    var gstOn3000 = gst18(3000);
+                    document.write( 'Rs.' + gstOn3000 + ' /- | ');
+                    var gstOn7000 = gst18(7000);
+                    document.write('Rs.' + gstOn7000);
+            </script>
+            <br>
+            <br>
+            <b>Ex.4 -</b> increament a number by 1
+            <br>
+            Output - --> 
+            <script>
+                    function increamentBy1(i) {
+                        // return i++;
+                        // return i = i + 1 ;
+                        return i+= 1;
+                    }
+                    var increamentedNumber = increamentBy1(27);
+                    document.write(increamentedNumber);
+            </script>
+            <br>
+            * Query : return i++ is not working here
+            <br>
+            <br>
+            <b>Ex.5 -</b> concatenation of strings
+            <br>
+            Output - --> 
+            <script>
+                  function stringConcat(firstString, secondString) {
+                    return firstString + secondString;
+                  }
+                  var newString1 = stringConcat('Mom','Dad');
+                  document.write(newString1);
+            </script>
+            <br>
+            <br>
+            <b>Ex.6 -</b> Output on the basis of a random number
+            <br>
+            Output - --> 
+            <script>
+                function randomNumber() {
+                    var rn = Math.random(); // Math.random() returns a random between 0 to 1
+                    if (rn > 0.5) {
+                        return color = 'white - ' + rn ;
+                    }
+                    else {
+                        return color = 'black - ' + rn;
+                    }
+                }
+                var finalColor = randomNumber();
+                document.write(finalColor);
+            </script>
+            <br>
+            <br>
+            <b>Ex.7 -</b> Any number to the power of x
+            <br>
+            Output - 7 to the power of 3 --> 
+            <script>
+                function numberToPowerX(number, px) {
+                    newNumber = 1;
+                    for (i=0; i<px; i++)
+                    {
+                    newNumber = newNumber * number;
+                    }
+                    return newNumber;
+                }
+                var npx = numberToPowerX(7,3);
+                document.write(npx);
+            </script>
+            <br>
+            <br>
+            <b>Ex.8 -</b> Area of a Rectangle 
+            <br>
+            Output - --> 
+            <script>
+              function areaOfRect(length, width) {
+                return length * width;
+              }
+              var rectArea = areaOfRect(12,40);
+              document.write(rectArea + ' sq.ft');
+            </script>
+            <br>
+            <br>
+            <b>Ex.9 -</b> Volume of a Rectangle  
+            <br>
+            Output - --> 
+            <script>
+                function volumeOfRect(length, width, height) {
+                    return length * width * height;
+                }
+                var rectVolume = volumeOfRect(12,40,15);
+                document.write(rectVolume + " cb.ft");
+            </script>
+            <br>
+            <br>
+            <b>Ex.10 -</b> Print the sequence of numbers
+            <br>
+            Output - --> 
+            <script>
+                function seqNum(num, seq) {
+                    for (i=0; i<=seq; i++)
+                    {
+                        document.write(newNum = num + i + ',');
+                    }
+                    // return newNum;
+                }
+                // var fsn = seqNum(16,9);
+                // document.write(fsn);
+                seqNum(16,9);
+            </script>
+            <br>
+            <br>
+            <b>Ex.11 -</b> Method in an Object
+            <br>
+            Output - --> 
+            <script>
+                person = {
+                            fName : 'Sachin',
+                            lName : 'Oswal',
+                            fullName : function () { 
+                                            // return fName + lName; // Wrong
+                                            // return person.fName + person.lName; // Right 
+                                            return this.fName + this.lName; // using this keyword
+                                                    }
+                            }
+                document.write(person.fullName());
+            </script>
+            <br>
+            // As fullName is a function, key 'fullName' in object 'person' is the method key (fName & lName is property key). <br>
+            // This is anonymous function where we don't write any name ahead of function() <br>
+            // no declaration after keyword function in above example, cause fullName : function () compiles to function fullName() <br>
+            // & so wheneer you want to fetch the value of this method key, you need to call this function as person.fullName() <br>
+            <br>
+
+            <b>Ex.12 -</b> Find if a number is prime or not 
+            <br>
+            Output - --> 
+            <script>
+                function ifNumPrime(num1) {
+                    for(i=2; i<num1; i++)
+                    {
+                        if (num1 % i == 0 ) {
+                            gtr = 'This is not a prime Number';
+                            break;
+                        } 
+                        else {
+                            gtr = 'This is a Prime Number';
+                        }
+                    }
+                   return gtr;
+                }
+
+                var ipn = ifNumPrime(11);
+                document.write(ipn);
+                // ifNumPrime(11); // not valid here, if a function uses return. then the output value of function should store in some variable as we have done in above line
+
+            </script>
+            <br>
+            <br>
+
+            <b>Ex. -</b> reverse a string 
+            <br>
+            Output - --> 
+            <script>
+              
+            </script>
+            <br>
+    
+        </p>
+
+      
+    </div>
+
+</body>
+
+</html>
