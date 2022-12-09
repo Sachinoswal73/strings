@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
-    <title>Functions</title>
+    <title> Operations on Strings</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
@@ -15,7 +15,7 @@
 <body>
     <script src="js/app.js"></script>
     <div class="container">
-        <h1 class="alert alert-info m-4">Functions</h1>
+        <h1 class="alert alert-info m-4">Strings</h1>
         <hr>
         <h3 class="alert alert-warning">1. </h3>
         <p>
@@ -43,23 +43,56 @@
             <b>Examples -</b>
             <br>
             <br>
-            <b>*</b> Addition of Two Numbers using a function
+            <b>*</b> 
             <br>
             --- Output -->
                 <script>  
-                    function addTwoNum(firstNum, lastNum) {
-                        // var firstNum; // this is how js compiles these parameters in the form of declarations behind the scene
-                        // var lastNum; // so parameters firstNum & lastNum are just like a local declarations in this function block
-                        var addResult = firstNum + lastNum; // This is the task / instruction / process to be performed by the Function
-                        document.write(addResult); // this will be the output of the function whenever it will be called
-                        // console.log(addResult);
-                    }
+                   let lastIndex = str.lastIndexOf("Angular");
+                   console.log(lastIndex);
 
-                    addTwoNum(50,37); // Need to call the function with the right arguments to get the result
-                    document.write(" | ");
-                    addTwoNum(35); // here only 1 argument is given. Showing output as NaN (Not a Number), must pass 2nd argument to get the correct result
-                    document.write(" | ");
-                    addTwoNum(300,925,90); // here, given 3 arguments by mistake. However, Function is not considering 3rd argument which is not required too
+                   let indexOfReact = str.indexOf("React");
+
+                   let indexOfNode = str.indexOf("Node");
+
+                   let str3 = " Angular is a javascript framework which is developed by Google. Google launched the 15th version of Angular.";
+                
+                   if ( str3.indexOf(" Google ") > -1 ) {
+                    console.log (" Google is there in the sentence.");
+                   }
+
+
+                   console.log(str3.included("Google")); 
+
+                   if ( str3.includes("Google") ) {
+                        console.log(" Google is there in the sentence.");
+                   }
+
+                   let str4 = 'I love Javascript';
+                   console.log( str4.toLowerCase );
+                   console.log( str4.toUpperCase );
+                   console.log( str4.includes("javascript") ); // false
+                   console.log( str4.toLowerCase.includes("javascript")); // true
+
+                   // trim
+
+                   let oxygen = ' javascript ';
+                   console.log( oxygen.length ); // 12
+                   console.log( oxygen.trim().length ) // 10
+
+                   if ( oxygen.length === 10 ) {
+                    console.log('string is not trimmed');
+                   }
+
+                   if ( oxygen.trim().length === 10 ) {
+                    console.log('string is trimmed from left & right side');
+                   }
+
+                   let greet1 = 'Hello';
+                   let greet2 = 'JS';
+
+                   // greet1 = greet1 + " " + greet2;
+                   greet1 = greet1.concat(' ' + greet2);
+                   greet1 = `${ greet1 } ${ greet2 }`
 
                 </script>
             <br>
